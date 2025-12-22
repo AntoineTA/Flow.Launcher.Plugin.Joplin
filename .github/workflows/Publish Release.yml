@@ -21,9 +21,12 @@ jobs:
         run: |
           dotnet build Flow.Launcher.Plugin.Joplin.csproj -c Release
 
-      - name: List build output
+      - name: Debug - List directory structure
         run: |
-          Get-ChildItem -Recurse -Directory -Filter "bin" | Select-Object FullName
+          Write-Host "Current directory:"
+          Get-Location
+          Write-Host "`nDirectory contents:"
+          Get-ChildItem -Recurse | Where-Object { $_.FullName -match "bin" } | Select-Object FullName
           
       - name: Package
         run: |
