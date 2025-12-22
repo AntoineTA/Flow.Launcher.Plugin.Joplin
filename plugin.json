@@ -1,0 +1,12 @@
+{
+  "ID": "7c4e9f8a-2b3d-4e6f-9a1b-5c7d8e9f0a1c",
+  "ActionKeyword": "jp",
+  "Name": "Joplin",
+  "Description": "Quickly create and edit notes in Joplin directly from Flow Launcher",
+  "Author": "AntoineTA",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/AntoineTA/Flow.Launcher.Plugin.Joplin",
+  "IcoPath": "icon.png",
+  "ExecuteFileName": "Flow.Launcher.Plugin.Joplin.dll"
+}
