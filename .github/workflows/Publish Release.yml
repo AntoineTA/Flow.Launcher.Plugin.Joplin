@@ -21,17 +21,10 @@ jobs:
         run: |
           dotnet build Flow.Launcher.Plugin.Joplin.csproj -c Release
 
-      - name: Debug - List directory structure
-        run: |
-          Write-Host "Current directory:"
-          Get-Location
-          Write-Host "`nDirectory contents:"
-          Get-ChildItem -Recurse | Where-Object { $_.FullName -match "bin" } | Select-Object FullName
-          
       - name: Package
         run: |
           $version = "${{ github.ref_name }}".TrimStart('v')
-          Compress-Archive -Path "bin/Release/net8.0-windows/*" -DestinationPath "Flow.Launcher.Plugin.Joplin-$version.zip"
+          Compress-Archive -Path "bin/Release/*" -DestinationPath "Flow.Launcher.Plugin.Joplin-$version.zip"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
