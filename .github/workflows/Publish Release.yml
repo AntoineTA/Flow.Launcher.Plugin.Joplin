@@ -21,6 +21,10 @@ jobs:
         run: |
           dotnet build Flow.Launcher.Plugin.Joplin.csproj -c Release
 
+      - name: List build output
+        run: |
+          Get-ChildItem -Recurse -Directory -Filter "bin" | Select-Object FullName
+          
       - name: Package
         run: |
           $version = "${{ github.ref_name }}".TrimStart('v')
