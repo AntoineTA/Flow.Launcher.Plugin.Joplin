@@ -38,7 +38,7 @@ namespace Flow.Launcher.Plugin.Joplin
                     {
                         Title = "Create a note in Joplin",
                         SubTitle = "Format: <title> <content> [!notebook]",
-                        IcoPath = "joplin.png"
+                        IcoPath = "icon.png"
                     }
                 };
             }
